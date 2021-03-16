@@ -1,6 +1,6 @@
 // Implement the following functions
 
-const stringLib = () => { 
+// const stringLib = () => { 
 
   function add(a, b){
     return a+b;
@@ -49,17 +49,17 @@ const stringLib = () => {
 
   }
 
-  function NumberListB(start,end, skipEvery){
+  function NumberListB(start,count, skipEvery){
     // return list of numbers starting at start and ending at end but skipping every N (ie: skip every 2, or skip every 3)
     let resultArr = [];
-    let count = 0;
+    let skipCount = 0;
     if(end>=start){
-      for(i=start; i<=end; i++){
+      for(i=start; (i<=(start + count)); i++){
         if(count!=skipEvery){
           resultArr.push(i);
-          count++;
+          couskipCountnt++;
         }else{
-          count = 0;
+          skipCount = 0;
         }
       }
     }
@@ -137,7 +137,26 @@ const stringLib = () => {
     }
   }        
 
+  function primeNum(count){
+    let length = 2+count;
+    let primeFlag = false;
+    let primeArr=[];
+    for(i=2; i<=length; i++){
+      primeFlag = false;
+      for(j=2; j<i; j++){
+        if((i%j) == 0){
+          primeFlag = true;
+          break;
+        }
+      }
+      if(!primeFlag){
+        primeArr.push(i);
+      }
+    }
+    return primeArr;
+  }
 
 
+// }
 
-}
+console.log(primeNum(10000));
