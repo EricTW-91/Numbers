@@ -28,13 +28,13 @@ const stringLib = () => {
 
   function Increment(a, b){
     // inc a by b
-    return add(a,b);
+    return a+=b;
   }
 
   
   function Decrement(a, b){
     // dec a by b
-    return sub(a,b);
+    return a-=b;
   }
   
   function NumberListA(start,end){
@@ -136,6 +136,8 @@ const stringLib = () => {
       return resultArr;
     }
   }        
+
+
 
 
 }
